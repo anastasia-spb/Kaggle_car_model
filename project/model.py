@@ -2,9 +2,9 @@ from torch.nn import Linear, Conv2d, MaxPool2d, Module, BatchNorm2d
 import torch.nn.functional as functional
 
 
-class AlexCaptchaNet(Module):
+class AlexNet(Module):
     def __init__(self):
-        super(AlexCaptchaNet, self).__init__()
+        super(AlexNet, self).__init__()
         self.conv1 = Conv2d(in_channels=3,
                             out_channels=96,
                             kernel_size=11,

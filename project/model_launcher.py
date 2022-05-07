@@ -1,5 +1,5 @@
 import torch
-from model import AlexCaptchaNet
+from model import AlexNet
 from torch.nn import CrossEntropyLoss
 from torch.optim import Adam
 from torch.utils.data import DataLoader
@@ -9,7 +9,7 @@ import numpy as np
 
 class ModelLauncher:
     def __init__(self, device):
-        self.model = AlexCaptchaNet()
+        self.model = AlexNet()
         self.device = device
         self.model = self.model.to(device=self.device)  # send the model for training on either cuda or cpu
         # Initialize learning parameters
